@@ -20,6 +20,7 @@ const scrapeLogic = async (res, url) => {
         await page.goto(url);
         const pageTitle = await page.title();
         res.send(pageTitle);
+        await browser.close();
     
   } catch (error) {
       console.log(error)
